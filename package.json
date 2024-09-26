@@ -2,9 +2,9 @@
   "name": "toy-robot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "concurrently \"tsc -w\" \"nodemon dist/main.js\"",
+    "dev": "tsc-watch --onSuccess \"node ./dist/main.js\"",
+    "start": "node ./dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.2",
-    "concurrently": "^9.0.1",
-    "nodemon": "^3.1.7",
+    "tsc-watch": "^6.2.0",
     "vitest": "^2.1.1"
   }
 }

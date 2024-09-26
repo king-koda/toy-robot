@@ -12,12 +12,14 @@ Installation Instructions:
 
 Toy Robot Commands:
 
-- to place the robot, the format is "PLACE X,Y,DIRECTION", supporting directions NORTH,EAST,SOUTH,WEST, and the X,Y coordinates 0,0 -> 4,4
-- to move the robot, the format is "MOVE"
-- to change the direction of the robot, the format is "ROTATEDIRECTION", supporting directions LEFT,RIGHT
-- to report the location of the robot, the format is "REPORT"
+- to place the robot, the format is "place X,Y,direction", supporting directions north,east,south,west, and the X,Y coordinates 0,0 -> 4,4
+- to move the robot, the format is "move"
+- to change the direction of the robot, the format is "direction", supporting directions left,right
+- to report the location of the robot, the format is "report"
+- to exit the application, "exit"
 
 Constraints:
 
 - the robot should never move out of bounds
 - invalid commands should be handled
+- the commands are case insensitive
