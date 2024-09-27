@@ -20,7 +20,6 @@ async function main() {
 
     reader.closeReader();
   }
-  process.exit(0);
 }
 
 main();
