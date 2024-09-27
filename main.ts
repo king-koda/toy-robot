@@ -1,12 +1,10 @@
 import { rotateDirections } from "./constants";
 import Reader from "./Reader";
-import { moveCommand } from "./main/moveCommand";
-import { placeCommand } from "./main/placeCommand";
-import { reportCommand } from "./main/reportCommand";
-import { rotateCommand } from "./main/rotateCommand";
+import { moveCommand } from "./commands/moveCommand";
+import { placeCommand } from "./commands/placeCommand";
+import { reportCommand } from "./commands/reportCommand";
+import { rotateCommand } from "./commands/rotateCommand";
 import { RobotLocation, RotateDirection } from "./types";
-import { storeLocation } from "./helpers/storeLocation";
-import { retrieveLocation } from "./helpers/retrieveLocation";
 
 async function main() {
   // initial application state
