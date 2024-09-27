@@ -10,6 +10,11 @@ Installation Instructions:
 - run the command "npm i" within the root directory
 - run the command "npm run start" to start the application
 
+Testing Instructions:
+
+- ensure the installation instructions have been followed first
+- run the command "npm run test" to run all of the applications unit tests
+
 Toy Robot Commands:
 
 - to place the robot, the format is "place X,Y,direction", supporting directions north,east,south,west, and the X,Y coordinates 0,0 -> 4,4

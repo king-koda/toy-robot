@@ -1,23 +1,28 @@
-import { askQuestion, closeReader, startReader } from "./reader";
+import Reader from "./Reader";
 
-// initial application state
-let exit = false;
+async function main() {
+  // initial application state
+  let exit = false;
 
-(async () => {
   while (!exit) {
-    console.log("hey");
-    await startReader();
+    const reader = new Reader();
 
     // TODO: create help line to show how to use the commands
-    const answer = await askQuestion(
-      "What should we do with the Robot? PLACE, MOVE, REPORT, or EXIT?"
-    );
+    const answer = await reader
+      .askQuestion(
+        "What should we do with the Robot? PLACE, MOVE, REPORT, or EXIT?"
+      )
+      .then((answer: string) => answer.toUpperCase());
 
     if (answer === "EXIT") {
       exit = true;
     }
 
-    closeReader();
+    reader.closeReader();
   }
   process.exit(0);
-})();
+}
+
+main();
+
+export default main;
