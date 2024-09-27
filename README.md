@@ -29,5 +29,3 @@ Constraints/Assumptions:
 - invalid commands should be handled
 - the commands are case insensitive
 - robot starts at 0,0,DEFAULT
-- added robots last location persisted in a file
-- - didn't add tests for the robots location due to it being out of scope and only really testing the utilities themselves
