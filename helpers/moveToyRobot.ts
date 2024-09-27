@@ -2,13 +2,11 @@ import { directionMap } from "../constants";
 import { RobotLocation } from "../types";
 import { validateRobotLocation } from "./validateRobotLocation";
 
-export const moveToyRobot = async (
-  currentLocation: RobotLocation
-): Promise<RobotLocation> => {
+export const moveToyRobot = (currentLocation: RobotLocation): RobotLocation => {
   const currentDirection = currentLocation[2];
 
   if (currentDirection === null) {
-    const error = "Robot has not been placed yet.";
+    const error = "Robot has not been placed yet, try placing it first.";
     throw new Error(error);
   }
 

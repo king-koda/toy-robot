@@ -1,10 +1,16 @@
-import { DirectionMap, Directions } from "./types";
+import { DirectionMap, Directions, RotateDirections } from "./types";
 
 export const directions: Directions = {
   NORTH: "NORTH",
   SOUTH: "SOUTH",
   EAST: "EAST",
   WEST: "WEST",
+};
+
+export const rotateDirections: RotateDirections = {
+  LEFT: "LEFT",
+  RIGHT: "RIGHT",
+  DEFAULT: "DEFAULT",
 };
 
 export const directionMap: DirectionMap = {

@@ -8,6 +8,10 @@ export type RobotLocation = [number, number, Direction | null];
 
 export type RotateDirection = "LEFT" | "RIGHT" | "DEFAULT";
 
+export type RotateDirections = {
+  [RD in RotateDirection]: string;
+};
+
 export type DirectionMatrice = [number, number];
 
 export type DirectionMap = {
