@@ -1,6 +1,6 @@
 import { ReadLine, createInterface } from "readline";
-import main from "./main";
 import Reader from "./Reader";
+import main from "./main";
 
 // readline module mock with createInterface override
 vi.mock("readline", async (importOriginal) => {
@@ -65,41 +65,5 @@ describe("Main Tests", () => {
         expect(reader.askQuestion("test")).resolves.toBe(expectedInput);
       });
     });
-
-    // describe("When trying to place the Robot", () => {
-    //   it("If the command resolves into more than 4 values", async () => {
-    //     const reader = new Reader();
-    //     const failingInput = "PLACE 2,3,NORTH,BYE";
-
-    //     mockReader.question = vi
-    //       .fn()
-    //       .mockImplementation((question, callback) => {
-    //         callback(failingInput);
-    //       });
-
-    //     // expect the application to exit its loop and return
-    //     expect(main()).resolves.toBeUndefined();
-
-    //     // ensure that the user input returned with the expected value
-    //     expect(reader.askQuestion("test")).resolves.toBe(failingInput);
-    //   });
-
-    //   it("If the user inputs 'EXIT' to the Application, the Application exits", async () => {
-    //     const reader = new Reader();
-    //     const expectedInput = "EXIT";
-
-    //     mockReader.question = vi
-    //       .fn()
-    //       .mockImplementation((question, callback) => {
-    //         callback("EXIT");
-    //       });
-
-    //     // expect the application to exit its loop and return
-    //     expect(main()).resolves.toBeUndefined();
-
-    //     // ensure that the user input returned with the expected value
-    //     expect(reader.askQuestion("test")).resolves.toBe(expectedInput);
-    //   });
-    // });
   });
 });

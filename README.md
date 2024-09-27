@@ -23,8 +23,11 @@ Toy Robot Commands:
 - to report the location of the robot, the format is "report"
 - to exit the application, "exit"
 
-Constraints:
+Constraints/Assumptions:
 
 - the robot should never move out of bounds
 - invalid commands should be handled
 - the commands are case insensitive
+- robot starts at 0,0,DEFAULT
+- added robots last location persisted in a file
+- - didn't add tests for the robots location due to it being out of scope and only really testing the utilities themselves

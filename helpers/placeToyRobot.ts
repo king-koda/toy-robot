@@ -2,10 +2,10 @@ import { directions } from "../constants";
 import { Direction, RobotLocation } from "../types";
 import { validateRobotLocation } from "./validateRobotLocation";
 
-export const placeToyRobot = async (
+export const placeToyRobot = (
   input: string,
   robotLocation: RobotLocation
-): Promise<RobotLocation> => {
+): RobotLocation => {
   // check before placing if the robot has already been placed
   if (robotLocation[2] !== "DEFAULT") {
     const error = "Robot already placed, try again.";

@@ -9,7 +9,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Robot already placed, try again.";
 
-      expect(placeToyRobot(passingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(passingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -20,7 +20,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Invalid PLACE command, try again.";
 
-      expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(failingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -31,7 +31,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Invalid PLACE command, try again.";
 
-      expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(failingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -42,7 +42,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Invalid PLACE command, try again.";
 
-      expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(failingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -53,7 +53,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Invalid PLACE command, try again.";
 
-      expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(failingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -64,7 +64,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Invalid PLACE command, try again.";
 
-      expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(failingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -75,7 +75,7 @@ describe("placeToyRobot", () => {
 
       const expectedError = "Invalid location for the Robot.";
 
-      expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
+      expect(() => placeToyRobot(failingInput, location)).toThrowError(
         expectedError
       );
     });
@@ -86,9 +86,7 @@ describe("placeToyRobot", () => {
 
       const expectedSuccess = [2, 2, "EAST"];
 
-      expect(placeToyRobot(failingInput, location)).resolves.toEqual(
-        expectedSuccess
-      );
+      expect(placeToyRobot(failingInput, location)).toEqual(expectedSuccess);
     });
   });
 });
