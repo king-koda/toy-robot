@@ -11,7 +11,7 @@ async function main() {
   // initial application state
   let exit = false;
 
-  let currentLocation: RobotLocation = [0, 0, null];
+  let currentLocation: RobotLocation = [0, 0, "DEFAULT"];
 
   while (!exit) {
     const reader = new Reader();
@@ -27,6 +27,23 @@ async function main() {
       case input === "EXIT":
         console.log("Exiting Application...");
         exit = true;
+        break;
+      case input === "REPORT":
+        console.log("Reporting the Location of the Toy Robot...");
+        try {
+          validateRobotLocation(currentLocation);
+          console.log(
+            currentLocation[0] +
+              "," +
+              currentLocation[1] +
+              "," +
+              currentLocation[2]
+          );
+          console.log("Toy Robot Location Reported Successfully.");
+        } catch (error) {
+          console.log(getErrorMessage(error));
+          console.log("Toy Robot Location not Reported.");
+        }
         break;
       case input.includes("PLACE"):
         console.log("Placing Toy Robot...");
@@ -64,16 +81,10 @@ async function main() {
           console.log("Toy Robot not Rotated.");
         }
         break;
-        } catch (error) {
-          console.log(error);
-        }
-        break;
       default:
         console.log("Invalid command, try again.");
         break;
     }
-
-    console.log("currentLocation", currentLocation);
 
     reader.closeReader();
   }

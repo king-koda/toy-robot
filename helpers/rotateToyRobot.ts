@@ -8,7 +8,7 @@ export const rotateToyRobot = (
 ): RobotLocation => {
   const currentDirection = currentLocation[2];
 
-  if (currentDirection === null) {
+  if (currentDirection === "DEFAULT") {
     const error = "Robot has not been placed yet, try placing it first.";
     throw new Error(error);
   }

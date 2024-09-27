@@ -4,7 +4,7 @@ import { moveToyRobot } from "./moveToyRobot";
 describe("moveToyRobot", () => {
   describe("When trying to move the Robot", () => {
     it("If the robot hasn't already been placed, throw an error", () => {
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError =
         "Robot has not been placed yet, try placing it first.";

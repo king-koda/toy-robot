@@ -4,7 +4,7 @@ import { rotateToyRobot } from "./rotateToyRobot";
 describe("rotateToyRobot", () => {
   describe("When trying to rotate the Robot", () => {
     it("If the robot hasn't already been placed, throw an error", () => {
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
       const newDirection = "LEFT";
 
       const expectedError =

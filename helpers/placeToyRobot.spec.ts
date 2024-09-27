@@ -16,7 +16,7 @@ describe("placeToyRobot", () => {
 
     it("If the user's input results in more than 4 parameters, throw an error", async () => {
       const failingInput = "PLACE 2,3,NORTH,BYE";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError = "Invalid PLACE command, try again.";
 
@@ -27,7 +27,7 @@ describe("placeToyRobot", () => {
 
     it("If the first value of the 4 parameters does not equal PLACE, throw an error", async () => {
       const failingInput = "INVALID 2,3,NORTH";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError = "Invalid PLACE command, try again.";
 
@@ -38,7 +38,7 @@ describe("placeToyRobot", () => {
 
     it("If the second value of the 4 parameters does not equal a number, throw an error", async () => {
       const failingInput = "PLACE A,3,NORTH";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError = "Invalid PLACE command, try again.";
 
@@ -49,7 +49,7 @@ describe("placeToyRobot", () => {
 
     it("If the third value of the 4 parameters does not equal a number, throw an error", async () => {
       const failingInput = "PLACE 2,A,NORTH";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError = "Invalid PLACE command, try again.";
 
@@ -60,7 +60,7 @@ describe("placeToyRobot", () => {
 
     it("If the fourth value of the 4 parameters does not equal a valid direction, throw an error", async () => {
       const failingInput = "PLACE 2,A,WEAST";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError = "Invalid PLACE command, try again.";
 
@@ -71,7 +71,7 @@ describe("placeToyRobot", () => {
 
     it("If the new location for the robot would out of bounds, throw an error", async () => {
       const failingInput = "PLACE -1,-1,EAST";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedError = "Invalid location for the Robot.";
 
@@ -82,7 +82,7 @@ describe("placeToyRobot", () => {
 
     it("If the command and placement location is valid, return the new location", async () => {
       const failingInput = "PLACE 2,2,EAST";
-      const location: RobotLocation = [0, 0, null];
+      const location: RobotLocation = [0, 0, "DEFAULT"];
 
       const expectedSuccess = [2, 2, "EAST"];
 

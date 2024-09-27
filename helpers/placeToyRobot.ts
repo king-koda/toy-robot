@@ -7,7 +7,7 @@ export const placeToyRobot = async (
   robotLocation: RobotLocation
 ): Promise<RobotLocation> => {
   // check before placing if the robot has already been placed
-  if (robotLocation[2] !== null) {
+  if (robotLocation[2] !== "DEFAULT") {
     const error = "Robot already placed, try again.";
     throw new Error(error);
   }

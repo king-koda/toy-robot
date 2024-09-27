@@ -4,7 +4,7 @@ export type Directions = {
   [D in Direction]: string;
 };
 
-export type RobotLocation = [number, number, Direction | null];
+export type RobotLocation = [number, number, Direction | "DEFAULT"];
 
 export type RotateDirection = "LEFT" | "RIGHT" | "DEFAULT";
 
