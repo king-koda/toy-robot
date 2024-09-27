@@ -3,7 +3,7 @@ import { placeToyRobot } from "./placeToyRobot";
 
 describe("placeToyRobot", () => {
   describe("When trying to place the Robot", () => {
-    it("If the robot has already been placed indicative by the direction paramater in the location, then throw an error", async () => {
+    it("If the robot has already been placed indicative by the direction paramater in the location, throw an error", async () => {
       const passingInput = "PLACE 2,3,NORTH";
       const location: RobotLocation = [0, 0, "NORTH"];
 
@@ -73,7 +73,7 @@ describe("placeToyRobot", () => {
       const failingInput = "PLACE -1,-1,EAST";
       const location: RobotLocation = [0, 0, null];
 
-      const expectedError = "Invalid new location for the Robot.";
+      const expectedError = "Invalid location for the Robot.";
 
       expect(placeToyRobot(failingInput, location)).rejects.toThrowError(
         expectedError

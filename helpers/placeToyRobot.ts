@@ -1,6 +1,6 @@
 import { directions } from "../constants";
 import { Direction, RobotLocation } from "../types";
-import { validateNewRobotLocation } from "./validateNewRobotLocation";
+import { validateRobotLocation } from "./validateRobotLocation";
 
 export const placeToyRobot = async (
   input: string,
@@ -36,7 +36,7 @@ export const placeToyRobot = async (
     throw new Error(error);
   }
 
-  validateNewRobotLocation([xPosition, yPosition, direction as Direction]);
+  validateRobotLocation([xPosition, yPosition, direction as Direction]);
 
   return [xPosition, yPosition, direction as Direction];
 };
